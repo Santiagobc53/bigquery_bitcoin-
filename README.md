@@ -26,6 +26,6 @@ Practicar consultas SQL avanzadas en BigQuery, enfocadas en extracción, filtrad
 
 ### 📊 Consulta 2: Actividad diaria en la red Bitcoin
 
-Este análisis muestra cuántas transacciones se realizaron por día en la red Bitcoin. Se utilizó la función `COUNT(*)` y se agruparon los resultados por fecha (`DATE(block_timestamp)`). El resultado permite ver tendencias de uso diario.
+Este análisis muestra la actividad diaria de los últimos 30 días en la red Bitcoin. Para cada día se calcula el número de transacciones (`COUNT(*)`) y el total de bytes procesados (`SUM(size)`). Los resultados se agrupan por fecha (`DATE(block_timestamp)`) y se filtran con `WHERE` para activar el partition pruning de BigQuery y reducir el costo de la consulta.
 
 🔍 Tabla usada: `bigquery-public-data.crypto_bitcoin.transactions`
