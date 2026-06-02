@@ -1,3 +1,6 @@
+-- Transacciones grandes de Bitcoin
+-- Consulta: últimas 10 transacciones más grandes por tamaño en bytes
+-- Propósito: análisis de tendencias de volumen en transacciones
 SELECT
   block_timestamp,
   `hash`,
