@@ -15,4 +15,4 @@ WHERE
   AND size > 1048576                     -- > 1 MiB (1024 * 1024 bytes)
 ORDER BY
   size DESC
-LIMIT 10
+LIMIT 20
